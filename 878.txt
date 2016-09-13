@@ -1,0 +1,10 @@
+In software evolution, branching of development occurs in some cases.
+If a developer wants to select a source file to which the latest bug fixes
+was performed or to collect functions out of branched software,
+it is important to know the derivative relationships of source files.
+In this paper, we focus on the differences of similar files and propose
+an approach for automatic extraction of the derivative relationships of source files.
+We construct a minimum spanning tree based on the number of lines of difference.
+The tree minimizes the amount of difference developers read.
+We performed a case study with open source software and discussed
+for the future work.

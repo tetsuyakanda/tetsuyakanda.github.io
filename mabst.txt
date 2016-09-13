@@ -1,0 +1,10 @@
+Software Product Line Engineering is an approach to efficient maintenance of a software product family.
+Software products which has applied this approach are called Software Product Line. 
+Re-engineering existing software product into software product lines is important task. 
+However, analyzing all software in the software family is hard task so the criteria for selecting initial products for construction of software product lines is needed. 
+Relationships about how software was evolved and when branched is useful information, but it is occasionally not available.
+In this research, we construct a Software Derivation Tree that approximates the derivation of software products.
+Our approach takes only source code of software family as an input.
+A software derivation tree is defined as a minimum spanning tree whose cost function is based on the number of similar source files.
+We conducted a case study with open source software projects.
+The result shows that about 86% of edges in software derivation trees are consistent with the actual version history. 

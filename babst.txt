@@ -1,0 +1,15 @@
+It is important for both users and developers to select an application what they need from similar applications.
+For users, it is one hint to know the differences of between applications with similar functions when selecting an application to use.
+Also for developers who want to add functions to an existing application, it is important to understand differences of functions implemented in applications.
+Therefore, clarifying differences between applications is needed.
+There are some ways to compare functions in several similar applications (e.g., using the applications, reading documents, and comparing source code).
+However, these methods for comparing have some problems.
+For example, the methods require a lot of effort of users, and it is difficult for users to set criteria for comparison.
+Therefore, it is hard to compare applications in easily understood form by these methods.
+In this paper, I propose a novel method of clarifying functional differences between applications by focusing on differences in API calling sequences.
+Generally, developers implement a function by combining APIs provided by the platform them.
+Therefore, I made a hypothesis that an API Calling sequence represents a function of an application. 
+I made a prototype tool to extract API callings from source code of Android applications and compare the sequences of API callings.
+I performed a case study to evaluate the validity of the method with the prototype tool.
+The evaluation selected Android, platform for mobile devices, as a target of study.
+The result of a case study shows that comparing applications in terms of functions can be achieved by the proposed method.
