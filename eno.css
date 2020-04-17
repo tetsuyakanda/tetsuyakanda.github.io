@@ -54,6 +54,9 @@ h3{
 .itsme{
 	text-decoration: underline;
 }
+.hey{
+	font-weight: bold;
+}
 .code{
 	padding: 0.2em ;
 	margin: 0.5em 3em;
