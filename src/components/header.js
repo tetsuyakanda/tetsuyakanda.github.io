@@ -1,6 +1,11 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import KanjiImg from "./kanji"
+
+const ListLink = ({ props }) => (
+  <Link />
+)
 
 const Header = ({ siteTitle }) => (
   <header
@@ -27,7 +32,7 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-      <div>a</div>
+      <KanjiImg />
     </div>
   </header>
 )

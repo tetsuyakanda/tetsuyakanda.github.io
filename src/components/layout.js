@@ -8,21 +8,30 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n';
 
 import Header from "./header"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
           title
+          languages {
+            defaultLangKey
+            langs
+          } 
         }
       }
     }
   `)
-
+  const url = location.pathname;
+  const { langs, defaultLangKey } = data.site.siteMetadata.languages;
+  const langKey = getCurrentLangKey(langs, defaultLangKey, url);
+  const homeLink = `/${langKey}/`.replace(`/${defaultLangKey}/`, '/');
+  const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url)).map((item) => ({ ...item, link: item.link.replace(`/${defaultLangKey}/`, '/') }));  
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
