@@ -7,7 +7,7 @@ import AboutMDX from "../data/about.ja.mdx"
 
 const AboutPage = (props) => (
   <Layout location={props.location}>
-    <SEO title="Home" />
+    <SEO title="About" />
     <AboutMDX />
   </Layout>
 )

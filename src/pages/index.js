@@ -1,23 +1,37 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { graphql, navigate, withPrefix } from "gatsby"
+import { getUserLangKey } from 'ptz-i18n';
 
-import Layout from "../components/layout"
-import MyImage from "../components/image"
-import SEO from "../components/seo"
+class RedirectIndex extends React.PureComponent {
+  constructor(args) {
+    super(args);
 
-import IndexMDX from "../data/index.mdx"
+    // Skip build, Browsers only
+    if (typeof window !== 'undefined') {
+      const { langs, defaultLangKey } = args.data.site.siteMetadata.languages;
+      const langKey = getUserLangKey(langs, defaultLangKey);
+      const homeUrl = withPrefix(`/${langKey}/`);
 
-const IndexPage = (props) => (
-  <Layout location={props.location}>
-    <SEO title="Home" />
-    <h1>KANDA, Tetsuya</h1>
-    <p>is 123456780-.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <MyImage />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <IndexMDX />
-  </Layout>
-)
+      navigate(homeUrl);
+    }
+  }
 
-export default IndexPage
+  render() {
+    return (<div />);
+  }
+}
+
+export default RedirectIndex;
+
+export const pageQuery = graphql`
+  query IndexQuery {    
+    site{
+      siteMetadata{
+        languages {
+          defaultLangKey
+          langs
+        }
+      }
+    }
+  }
+`;
