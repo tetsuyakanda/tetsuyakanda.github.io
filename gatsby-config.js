@@ -7,6 +7,10 @@ module.exports = {
       langs: [`en`, `ja`],
       defaultLangKey: `en`
     },
+    menu: [
+      { label: 'home', slug: '/' },
+      { label: 'about', slug: '/about/' }
+    ],
     basePath: `/`,
     social: {
       twitter: `https://twitter.com/tetsuyakanda`,
@@ -44,7 +48,7 @@ module.exports = {
       options: {
         langKeyDefault: 'en',
         useLangKeyLayout: false,
-        prefixDefault: false
+        prefixDefault: true
       }
     },
     {

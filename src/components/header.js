@@ -1,13 +1,25 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import { injectIntl, FormattedMessage } from "react-intl"
 import KanjiImg from "./kanji"
 
-const ListLink = ({ props }) => (
-  <Link />
-)
+const ListLink = ({ menu, langKey }) => {
+  console.log(menu);
+  return menu.map(item => {
+    const slug = `/${langKey}${item.slug}`
+    console.log(slug)
+    return(
+      <FormattedMessage id={item.label}>
+            {(label) =>
+            <Link to={slug}>{label}</Link>
+            }
+      </FormattedMessage>
+    )
+  });
+}
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, menu, langKey }) => (
   <header
     style={{
       background: `rebeccapurple`,
@@ -34,11 +46,15 @@ const Header = ({ siteTitle }) => (
       </h1>
       <KanjiImg />
     </div>
+    <nav>
+      <ListLink menu={menu} langKey = {langKey} />
+    </nav>
   </header>
 )
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
+  menu: PropTypes.array,
 }
 
 Header.defaultProps = {

@@ -11,7 +11,7 @@ const IndexPage = (props) => (
   <Layout location={props.location}>
     <SEO title="Home" />
     <h1>KANDA, Tetsuya</h1>
-    <p>is .</p>
+    <p>is 123456780-.</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <MyImage />
     </div>
