@@ -7,14 +7,14 @@ const theme = {
   googleFonts: [
     {
       name: `Noto Serif JP`,
-      styles: [`700`],
+      styles: [`900`],
     },
     {
       name: `Sawarabi Mincho`,
       styles: [`400`],
     },
   ],
-  headerWeight: 700,
+  headerWeight: 900,
   bodyWeight: 400,
   boldWeight: 600,
 };

@@ -19,10 +19,10 @@ const ListLink = ({ menu, langKey }) => {
   });
 }
 
-const Header = ({ siteTitle, menu, langKey }) => (
+const Header = ({ menu, langKey }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `green`,
       marginBottom: `1.45rem`,
     }}
   >
@@ -41,10 +41,11 @@ const Header = ({ siteTitle, menu, langKey }) => (
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
-        </Link>
+          <FormattedMessage id="title" />
+        </Link><br />
+        <span style={{ fontSize: `1.75rem` }}>KANDA, Tetsuya</span>
       </h1>
-      <KanjiImg />
+
     </div>
     <nav>
       <ListLink menu={menu} langKey = {langKey} />
@@ -53,12 +54,8 @@ const Header = ({ siteTitle, menu, langKey }) => (
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
   menu: PropTypes.array,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+  langKey: PropTypes.string,
 }
 
 export default Header
