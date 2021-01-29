@@ -1,6 +1,6 @@
 const theme = {
   baseFontSize: `16px`,
-  baseLineHeight: 1.5,
+  baseLineHeight: 1.25,
   scale: 2,
   headerFontFamily: [`Noto Serif JP`, `serif`],
   bodyFontFamily: [`Sawarabi Mincho`, `serif`],

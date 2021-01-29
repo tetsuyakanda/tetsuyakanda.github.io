@@ -3,23 +3,10 @@ import PropTypes from "prop-types"
 import React from "react"
 import { injectIntl, FormattedMessage } from "react-intl"
 import KanjiImg from "./kanji"
+import ListLink from "./listlink"
+import SelectLanguage from "./selectLanguage"
 
-const ListLink = ({ menu, langKey }) => {
-  console.log(menu);
-  return menu.map(item => {
-    const slug = `/${langKey}${item.slug}`
-    console.log(slug)
-    return(
-      <FormattedMessage id={item.label}>
-            {(label) =>
-            <Link to={slug}>{label}</Link>
-            }
-      </FormattedMessage>
-    )
-  });
-}
-
-const Header = ({ menu, langKey }) => (
+const Header = ({ menu, langKey, langs }) => (
   <header
     style={{
       background: `green`,
@@ -49,6 +36,7 @@ const Header = ({ menu, langKey }) => (
     </div>
     <nav>
       <ListLink menu={menu} langKey = {langKey} />
+      <SelectLanguage langs={langs} />
     </nav>
   </header>
 )
@@ -56,6 +44,7 @@ const Header = ({ menu, langKey }) => (
 Header.propTypes = {
   menu: PropTypes.array,
   langKey: PropTypes.string,
+  langs: PropTypes.array,
 }
 
 export default Header

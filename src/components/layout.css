@@ -497,7 +497,7 @@ th {
   font-weight: bold;
 }
 li {
-  margin-bottom: calc(1.45rem / 2);
+  margin-bottom: calc(1.4rem / 2);
 }
 ol li {
   padding-left: 0;
@@ -506,14 +506,14 @@ ul li {
   padding-left: 0;
 }
 li > ol {
-  margin-left: 1.45rem;
-  margin-bottom: calc(1.45rem / 2);
-  margin-top: calc(1.45rem / 2);
+  margin-left: 1.4rem;
+  margin-bottom: calc(1.4rem / 2);
+  margin-top: calc(1.4rem / 2);
 }
 li > ul {
-  margin-left: 1.45rem;
-  margin-bottom: calc(1.45rem / 2);
-  margin-top: calc(1.45rem / 2);
+  margin-left: 1.4rem;
+  margin-bottom: calc(1.4rem / 2);
+  margin-top: calc(1.4rem / 2);
 }
 blockquote *:last-child {
   margin-bottom: 0;
@@ -525,19 +525,19 @@ p *:last-child {
   margin-bottom: 0;
 }
 li > p {
-  margin-bottom: calc(1.45rem / 2);
+  margin-bottom: calc(1.4rem / 2);
 }
 code {
   font-size: 0.85rem;
-  line-height: 1.45rem;
+  line-height: 1.4rem;
 }
 kbd {
   font-size: 0.85rem;
-  line-height: 1.45rem;
+  line-height: 1.4rem;
 }
 samp {
   font-size: 0.85rem;
-  line-height: 1.45rem;
+  line-height: 1.4rem;
 }
 abbr {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);

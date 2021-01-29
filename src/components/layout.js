@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { IntlProvider, FormattedMessage } from 'react-intl'
+import { IntlProvider } from 'react-intl'
 import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n'
 
 import Header from "./header"
@@ -39,14 +39,13 @@ const Layout = ({ children, location }) => {
   `)
   const url = location.pathname;
   const { title, menu } = data.site.siteMetadata;
-  console.log(menu);
   const { langs, defaultLangKey } = data.site.siteMetadata.languages;
   const langKey = getCurrentLangKey(langs, defaultLangKey, url);
-  const homeLink = `/${langKey}/`.replace(`/${defaultLangKey}/`, '/');
-  const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url)).map((item) => ({ ...item, link: item.link.replace(`/${defaultLangKey}/`, '/') }));  
+  const homeLink = `/${langKey}/`;
+  const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url)); 
   return (
     <IntlProvider locale={langKey} messages={messages[langKey]}>
-      <Header siteTitle={title} menu={menu} langKey={langKey}/>
+      <Header siteTitle={title} menu={menu} langKey={langKey} langs={langsMenu}/>
       <div
         style={{
           margin: `0 auto`,
@@ -67,6 +66,7 @@ const Layout = ({ children, location }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  location: PropTypes.object.isRequired,
 };
 
 export default Layout;
