@@ -2,11 +2,11 @@ import React from "react"
 
 import Layout from "../components/layout"
 import MyImage from "../components/image"
+import Email from "../components/email"
 import SEO from "../components/seo"
 
 import propTypes from "../components/defaultPropTypes"
 
-import IndexMDX from "../data/index.ja.mdx"
 
 const IndexPage = ({location}) => (
   <Layout location={location}>
@@ -17,7 +17,7 @@ const IndexPage = ({location}) => (
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <MyImage />
     </div>
-    <IndexMDX />
+    <Email />
   </Layout>
 )
 

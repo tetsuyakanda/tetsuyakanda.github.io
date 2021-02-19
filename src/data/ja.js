@@ -3,5 +3,6 @@ module.exports = {
     title: `神田 哲也`,
     home: `ホーム`,
     about: `あばうと`,
-    service: `あかでみっくさーびす`
+    service: `あかでみっくさーびす`,
+    contact: `連絡先`
 }
