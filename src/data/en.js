@@ -2,5 +2,6 @@
 module.exports = {
     title: `KANDA Tetsuya`,
     home: `Home`,
-    about: `About`
+    about: `About`,
+    service: `Service`
 }

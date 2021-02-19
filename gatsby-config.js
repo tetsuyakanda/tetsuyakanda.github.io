@@ -9,7 +9,8 @@ module.exports = {
     },
     menu: [
       { label: 'home', slug: '/' },
-      { label: 'about', slug: '/about/' }
+      { label: 'about', slug: '/about/' },
+      { label: 'service', slug: '/service/' }
     ],
     basePath: `/`,
     social: {

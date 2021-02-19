@@ -4,10 +4,12 @@ import Layout from "../components/layout"
 import MyImage from "../components/image"
 import SEO from "../components/seo"
 
+import propTypes from "../components/defaultPropTypes"
+
 import IndexMDX from "../data/index.mdx"
 
-const IndexPage = (props) => (
-  <Layout location={props.location}>
+const IndexPage = ({location}) => (
+  <Layout location={location}>
     <SEO title="Home" />
     <h1>KANDA, Tetsuya</h1>
     <p>Assistant Professor<br />
@@ -20,5 +22,7 @@ const IndexPage = (props) => (
     <IndexMDX />
   </Layout>
 )
+
+IndexPage.propTypes = propTypes;
 
 export default IndexPage
