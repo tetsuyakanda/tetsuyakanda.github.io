@@ -1,4 +1,7 @@
 module.exports = {
+  flags: {
+    DEV_SSR: false,
+  },
   siteMetadata: {
     title: `KANDA, Tetsuya`,
     description: `Assistant Professor, Osaka University`,
@@ -64,5 +67,13 @@ module.exports = {
         pathToConfigModule: `src/styles/typography`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `bib`,
+        path: `${__dirname}/src/bib`,
+      },
+    },
+    `@tetsuyakanda/gatsby-transformer-citationjs`
   ],
 }
