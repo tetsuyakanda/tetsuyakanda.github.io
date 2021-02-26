@@ -4,5 +4,6 @@ module.exports = {
     home: `Home`,
     about: `About`,
     service: `Service`,
+    publications: `Publications`,
     contact: `contact`
 }

@@ -13,6 +13,7 @@ module.exports = {
     menu: [
       { label: 'home', slug: '/' },
       { label: 'about', slug: '/about/' },
+      { label: 'publications', slug: '/publications/' },
       { label: 'service', slug: '/service/' }
     ],
     basePath: `/`,

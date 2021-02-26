@@ -4,5 +4,6 @@ module.exports = {
     home: `ホーム`,
     about: `あばうと`,
     service: `あかでみっくさーびす`,
+    publications: `ろんぶん`,
     contact: `連絡先`
 }

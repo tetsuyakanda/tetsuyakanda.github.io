@@ -611,3 +611,6 @@ pre tt:after {
 .was{
 	color: #999999;
 }
+.itsme{
+	text-decoration: underline;
+}
