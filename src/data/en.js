@@ -5,5 +5,9 @@ module.exports = {
     about: `About`,
     service: `Service`,
     publications: `Publications`,
-    contact: `contact`
+    contact: `contact`,
+    conf: `Conference and Workshop Papers`,
+    journal: `Journal Papers`,
+    tech: `Technical Reports`,
+    poster: `Posters`
 }

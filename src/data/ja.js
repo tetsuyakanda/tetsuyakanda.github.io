@@ -5,5 +5,9 @@ module.exports = {
     about: `あばうと`,
     service: `あかでみっくさーびす`,
     publications: `ろんぶん`,
-    contact: `連絡先`
+    contact: `連絡先`,
+    conf: `会議`,
+    journal: `論文誌`,
+    tech: `研究会・大会（査読なし）`,
+    poster: `ポスター発表`
 }
