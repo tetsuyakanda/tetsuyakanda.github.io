@@ -1,11 +1,13 @@
 import React from "react"
 
-const en = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+const en = [
+  'January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December'
+];
 
 function langStyle(lang, label) {
   return (lang === `ja` && label.endsWith(`_J`)) ? `ja` : `en`;
 }
-
 
 const JStyle = ({date_parts}) => {
   return (

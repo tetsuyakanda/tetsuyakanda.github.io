@@ -4,7 +4,7 @@ import { FormattedMessage } from "react-intl";
 
 import CiteItem from "./citeitem"
 
-const category = [`journal`, `conf`, `tech`,`poster`]
+const category = [`journal`, `conf`, `j_conf`, `tech`,`poster`]
 
 function group(data) {
   return data.reduce((obj, value) => {
