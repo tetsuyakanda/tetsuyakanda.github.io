@@ -7,7 +7,6 @@ import SEO from "../components/seo"
 
 import propTypes from "../components/defaultPropTypes"
 
-
 const IndexPage = ({location}) => (
   <Layout location={location}>
     <SEO title="ホーム" />

@@ -15,7 +15,7 @@ import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n'
 import Header from "./header"
 import en from "../data/en"
 import ja from "../data/ja"
-import "./layout.css"
+// import "./layout.css"
 
 const messages = { en, ja };
 

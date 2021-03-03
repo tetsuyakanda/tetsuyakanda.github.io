@@ -6,17 +6,17 @@ import Contents from "./contents"
 
 const CiteItem = ({lang, papers}) => {
   const items = papers.map((c) => 
-  <div key={c.id}>
+  <li key={c.id}>
     <Author lang={lang} language={c.language} author={c.author}/>
     : <span>&ldquo;{c.title}&rdquo;</span>
     , <Contents cite={c} />
     , <Ym lang={lang} label={c.citation_label} date_parts={c.issued.date_parts}/>
-  </div>)
+  </li>)
 
   return (
-    <div>
+    <ul>
       {items}
-    </div>
+    </ul>
   )
 }
 

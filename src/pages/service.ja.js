@@ -9,7 +9,7 @@ import ServiceMDX from "../data/service.ja.mdx"
 
 const ServicePage = ({location}) => (
   <Layout location={location}>
-    <SEO title="Home" />
+    <SEO title="Service" />
     <ServiceMDX />
   </Layout>
 )
