@@ -5,15 +5,15 @@ import SEO from "../components/seo"
 
 import propTypes from "../components/defaultPropTypes"
 
-import ServiceMDX from "../data/service.en.mdx"
+import LectureMDX from "../data/lecture.en.mdx"
 
-const ServicePage = ({location}) => (
+const LecturePage = ({location}) => (
   <Layout location={location}>
-    <SEO title="Service" />
-    <ServiceMDX />
+    <SEO title="Teaching" />
+    <LectureMDX />
   </Layout>
 )
 
-ServicePage.propTypes = propTypes;
+LecturePage.propTypes = propTypes;
 
-export default ServicePage
+export default LecturePage

@@ -5,12 +5,14 @@ import SEO from "../components/seo"
 
 import propTypes from "../components/defaultPropTypes"
 
-import ServiceMDX from "../data/service.ja.mdx"
+import ServiceMDX from "../data/activity/service.en.mdx"
+import AwardsMDX from "../data/activity/awards.en.mdx"
 
 const ServicePage = ({location}) => (
   <Layout location={location}>
     <SEO title="Service" />
     <ServiceMDX />
+    <AwardsMDX />
   </Layout>
 )
 

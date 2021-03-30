@@ -9,7 +9,7 @@ const CiteItem = ({lang, papers}) => {
   <li key={c.id}>
     <Author lang={lang} language={c.language} author={c.author}/>
     : <span>&ldquo;{c.title}&rdquo;</span>
-    , <Contents cite={c} />
+    , <Contents cite={c} lang={lang} />
     , <Ym lang={lang} label={c.citation_label} date_parts={c.issued.date_parts}/>
   </li>)
 

@@ -3,7 +3,7 @@ module.exports = {
     title: `神田 哲也`,
     home: `ホーム`,
     about: `あばうと`,
-    service: `あかでみっくさーびす`,
+    activity: `かつどう`,
     publications: `ろんぶん`,
     contact: `連絡先`,
     conf: `国際会議・ワークショップ`,

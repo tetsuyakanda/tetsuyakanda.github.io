@@ -2,24 +2,21 @@ import React from "react"
 
 import Conference from "./conference"
 import Journal from "./journal"
-import TechRep from "./techrep"
 import Poster from "./poster"
 
-
-const Contents = ({cite}) => {
+const Contents = ({cite, lang}) => {
   if(!cite.issued.date_parts[0][1]){
     return <span>{cite.container_title} (to appear)</span>
-  }
+  } else
   switch(cite.genre){
     case `conf`:
     case `j_conf`:
+    case `tech`:
       return <Conference cite={cite} />
     case `journal`:
       return <Journal cite={cite} />
-    case `tech`:
-      return <TechRep cite={cite} />
     case `poster`:
-      return <Poster cite={cite} />
+      return <Poster cite={cite} lang={lang} />
     default:
       return <span>{cite.genre} still undef.</span>
   }

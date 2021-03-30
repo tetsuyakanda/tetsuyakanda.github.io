@@ -14,6 +14,14 @@ function group(data) {
   }, {})
 }
 
+function sort(c1, c2) {
+  const c1d = c1.issued.date_parts[0];
+  const c2d = c2.issued.date_parts[0];
+  return c1d[0] < c2d[0] || c1d[0] == c2d[0] && c1d[1] < c2d[1] || c1d[0] == c2d[0] && c1d[1] == c2d[1] && c1d[2] < c2d[2]
+  // to appear は 月がnullなので、nullとの比較で上位に行くようにする
+  //return !(c1d[0] > c2d[0] || c1d[0] == c2d[0] && c1d[1] > c2d[1] || c1d[0] == c2d[0] && c1d[1] == c2d[1] && c1d[2] > c2d[2])
+}
+
 // load all citations first, then filter with request
 
 const Citation = ({lang}) => {
@@ -74,7 +82,7 @@ const Citation = ({lang}) => {
     )
   }
 
-  const citations = state.filter((c) => switchEntryWithLang(c, lang));
+  const citations = state.filter((c) => switchEntryWithLang(c, lang)).sort(sort);
   const citationGroups = group(citations);
 
   const paperList = category.map((type) => {

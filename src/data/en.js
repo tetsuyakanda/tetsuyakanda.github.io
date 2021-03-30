@@ -3,7 +3,7 @@ module.exports = {
     title: `KANDA Tetsuya`,
     home: `Home`,
     about: `About`,
-    service: `Service`,
+    activity: `Activity`,
     publications: `Publications`,
     contact: `contact`,
     conf: `International Conference and Workshop Papers`,
