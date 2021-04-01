@@ -10,5 +10,9 @@ module.exports = {
     j_conf: `国内会議等（査読あり）`,
     journal: `論文誌`,
     tech: `研究会・大会等（査読なし）`,
-    poster: `ポスター発表`
+    poster: `ポスター発表`,
+    langFilter: `論文の記述言語`,
+    lAll: `全て`,
+    lEnglish: `英語`,
+    lJapanese: `日本語`,
 }

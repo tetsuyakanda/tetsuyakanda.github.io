@@ -10,5 +10,9 @@ module.exports = {
     j_conf: `Domestic (Japanese) Conference and Workshops`,
     journal: `Journal Papers`,
     tech: `Technical Reports and Talks`,
-    poster: `Posters`
+    poster: `Posters`,
+    langFilter: `Show papers written in`,
+    lAll: `All`,
+    lEnglish: `English`,
+    lJapanese: `Japanese`,
 }

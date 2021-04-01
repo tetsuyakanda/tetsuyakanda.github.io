@@ -1,8 +1,10 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import styled from 'styled-components';
 import { FormattedMessage } from "react-intl";
 
-import CiteItem from "./citeitem"
+import CiteItem from "./citeitem";
+import LangFilter from "./langFilter";
 
 const category = [`journal`, `conf`, `j_conf`, `tech`,`poster`]
 
@@ -17,9 +19,9 @@ function group(data) {
 function sort(c1, c2) {
   const c1d = c1.issued.date_parts[0];
   const c2d = c2.issued.date_parts[0];
-  return c1d[0] < c2d[0] || c1d[0] == c2d[0] && c1d[1] < c2d[1] || c1d[0] == c2d[0] && c1d[1] == c2d[1] && c1d[2] < c2d[2]
+  //return c1d[0] < c2d[0] || c1d[0] == c2d[0] && c1d[1] < c2d[1] || c1d[0] == c2d[0] && c1d[1] == c2d[1] && c1d[2] < c2d[2]
   // to appear は 月がnullなので、nullとの比較で上位に行くようにする
-  //return !(c1d[0] > c2d[0] || c1d[0] == c2d[0] && c1d[1] > c2d[1] || c1d[0] == c2d[0] && c1d[1] == c2d[1] && c1d[2] > c2d[2])
+  return !(c1d[0] > c2d[0] || c1d[0] == c2d[0] && c1d[1] > c2d[1] || c1d[0] == c2d[0] && c1d[1] == c2d[1] && c1d[2] > c2d[2])
 }
 
 // load all citations first, then filter with request
@@ -66,21 +68,16 @@ const Citation = ({lang}) => {
     return !cite.citation_label.endsWith(ignoreSuffix);
   }
 
+  const langs = [`All`, `English`, `Japanese`]
+
   const handleRadioLang = (event) => {
     const value = event.target.value
-    const result = (value === `all`) ? nodes : nodes.filter((c) => c.language === value);
+    const result = (value === langs[0]) ? nodes : nodes.filter((c) => c.language === value);
     setState(result)
+    setLf(value)
   }
 
-  const Selector = () => {
-    return(
-      <div> Language Filter
-        <label id="all"><input type="radio" name="lang" value="all" htmlFor="japanese" onChange={handleRadioLang}/>All</label>
-        <label id="english"><input type="radio" name="lang" value="English" htmlFor="english" onChange={handleRadioLang} />English</label>
-        <label id="japanese"><input type="radio" name="lang" value="Japanese" htmlFor="japanese" onChange={handleRadioLang}/>Japanese</label>
-      </div>
-    )
-  }
+  const [lf, setLf] = useState(langs[0]);
 
   const citations = state.filter((c) => switchEntryWithLang(c, lang)).sort(sort);
   const citationGroups = group(citations);
@@ -101,10 +98,12 @@ const Citation = ({lang}) => {
 
   return (
     <div>
-      <Selector />
+      <LangFilter names={langs} handleRadioLang={handleRadioLang} lf={lf} />
       {paperList}
     </div>
   )
 }
+
+
 
 export default Citation

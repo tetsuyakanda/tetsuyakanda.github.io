@@ -37,6 +37,9 @@ const theme = {
     'li': {
       marginBottom: rhythm(0.25), 
     },
+    'div#lf': {
+      marginBottom: rhythm(1), 
+    },
   })
 };
 
