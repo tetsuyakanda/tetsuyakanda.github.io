@@ -21,26 +21,29 @@ const theme = {
   bodyColor: "hsla(150,100%,10%,0.9)",
   blockMarginBottom: 1,
   overrideStyles: ({ scale, rhythm }, options, styles) => ({
-    'h1': {
-      letterSpacing: '0.04em',
+    h1: {
+      letterSpacing: "0.04em",
     },
-    'h1,h2,h3,h4,h5,h6': {
+    "h1,h2,h3,h4,h5,h6": {
       lineHeight: rhythm(1.5),
       marginBottom: rhythm(0.5),
     },
-    '.was': {
+    ".was": {
       color: "#999999",
     },
-    '.itsme': {
+    ".itsme": {
       textDecoration: "underline",
     },
-    'li': {
-      marginBottom: rhythm(0.25), 
+    ".paperTitle": {
+      fontWeight: "bolder",
     },
-    'div#lf': {
-      marginBottom: rhythm(1), 
+    li: {
+      marginBottom: rhythm(0.25),
     },
-  })
+    "div#lf": {
+      marginBottom: rhythm(1),
+    },
+  }),
 };
 
 export default theme;

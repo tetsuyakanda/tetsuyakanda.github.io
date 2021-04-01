@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
 export const KanjiImage = () => {
@@ -7,6 +7,6 @@ export const KanjiImage = () => {
       <StaticImage src="../images/kanji.jpg" alt="KANDA Tetsuya in Kanji" />
     </div>
   );
-}
+};
 
-export default KanjiImage
+export default KanjiImage;

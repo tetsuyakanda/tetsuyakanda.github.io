@@ -1,19 +1,18 @@
-import React, { useState } from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import styled from 'styled-components';
+import React, { useState } from "react";
+import { useStaticQuery, graphql } from "gatsby";
 import { FormattedMessage } from "react-intl";
 
 import CiteItem from "./citeitem";
 import LangFilter from "./langFilter";
 
-const category = [`journal`, `conf`, `j_conf`, `tech`,`poster`]
+const category = [`journal`, `conf`, `j_conf`, `tech`, `poster`];
 
 function group(data) {
   return data.reduce((obj, value) => {
     const key = category.includes(value.genre) ? value.genre : `others`;
     (obj[key] || (obj[key] = [])).push(value);
     return obj;
-  }, {})
+  }, {});
 }
 
 function sort(c1, c2) {
@@ -21,18 +20,22 @@ function sort(c1, c2) {
   const c2d = c2.issued.date_parts[0];
   //return c1d[0] < c2d[0] || c1d[0] == c2d[0] && c1d[1] < c2d[1] || c1d[0] == c2d[0] && c1d[1] == c2d[1] && c1d[2] < c2d[2]
   // to appear は 月がnullなので、nullとの比較で上位に行くようにする
-  return !(c1d[0] > c2d[0] || c1d[0] == c2d[0] && c1d[1] > c2d[1] || c1d[0] == c2d[0] && c1d[1] == c2d[1] && c1d[2] > c2d[2])
+  return !(
+    c1d[0] > c2d[0] ||
+    (c1d[0] == c2d[0] && c1d[1] > c2d[1]) ||
+    (c1d[0] == c2d[0] && c1d[1] == c2d[1] && c1d[2] > c2d[2])
+  );
 }
 
 // load all citations first, then filter with request
 
-const Citation = ({lang}) => {
-  const {allCitation} = useStaticQuery(graphql`
-   query {
+const Citation = ({ lang }) => {
+  const { allCitation } = useStaticQuery(graphql`
+    query {
       allCitation {
         edges {
           node {
-            author{
+            author {
               given
               family
             }
@@ -56,54 +59,57 @@ const Citation = ({lang}) => {
           }
         }
       }
-    } 
-  `)
+    }
+  `);
 
-  const nodes = allCitation.edges.map((c) => c.node)
+  const nodes = allCitation.edges.map((c) => c.node);
 
   const [state, setState] = useState(nodes);
 
   const switchEntryWithLang = (cite, lang) => {
-    const ignoreSuffix = (lang === `ja`) ? `_E` : `_J`;
+    const ignoreSuffix = lang === `ja` ? `_E` : `_J`;
     return !cite.citation_label.endsWith(ignoreSuffix);
-  }
+  };
 
-  const langs = [`All`, `English`, `Japanese`]
+  const langs = [`All`, `English`, `Japanese`];
 
   const handleRadioLang = (event) => {
-    const value = event.target.value
-    const result = (value === langs[0]) ? nodes : nodes.filter((c) => c.language === value);
-    setState(result)
-    setLf(value)
-  }
+    const value = event.target.value;
+    const result =
+      value === langs[0] ? nodes : nodes.filter((c) => c.language === value);
+    setState(result);
+    setLf(value);
+  };
 
   const [lf, setLf] = useState(langs[0]);
 
-  const citations = state.filter((c) => switchEntryWithLang(c, lang)).sort(sort);
+  const citations = state
+    .filter((c) => switchEntryWithLang(c, lang))
+    .sort(sort);
   const citationGroups = group(citations);
 
   const paperList = category.map((type) => {
-    const papers = citationGroups[type]
+    const papers = citationGroups[type];
     if (!papers) {
-      return null
+      return null;
     } else {
       return (
         <div key={type}>
-          <h2><FormattedMessage id={type} /></h2>
+          <h2>
+            <FormattedMessage id={type} />
+          </h2>
           <CiteItem lang={lang} papers={papers} />
         </div>
-      )
+      );
     }
-  })
+  });
 
   return (
     <div>
       <LangFilter names={langs} handleRadioLang={handleRadioLang} lf={lf} />
       {paperList}
     </div>
-  )
-}
+  );
+};
 
-
-
-export default Citation
+export default Citation;

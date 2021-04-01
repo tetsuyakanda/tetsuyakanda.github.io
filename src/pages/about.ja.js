@@ -1,19 +1,19 @@
-import React from "react"
+import React from "react";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
-import propTypes from "../components/defaultPropTypes"
+import propTypes from "../components/defaultPropTypes";
 
-import AboutMDX from "../data/about.ja.mdx"
+import AboutMDX from "../data/about.ja.mdx";
 
-const AboutPage = ({location}) => (
+const AboutPage = ({ location }) => (
   <Layout location={location}>
     <SEO title="About" />
     <AboutMDX />
   </Layout>
-)
+);
 
 AboutPage.propTypes = propTypes;
 
-export default AboutPage
+export default AboutPage;

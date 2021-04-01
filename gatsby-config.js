@@ -8,13 +8,14 @@ module.exports = {
     author: `@tetsuyakanda`,
     languages: {
       langs: [`en`, `ja`],
-      defaultLangKey: `en`
+      defaultLangKey: `en`,
     },
     menu: [
-      { label: 'home', slug: '/' },
-      { label: 'about', slug: '/about/' },
-      { label: 'publications', slug: '/publications/' },
-      { label: 'activity', slug: '/activity/' }
+      { label: "home", slug: "/" },
+      { label: "about", slug: "/about/" },
+      { label: "publications", slug: "/publications/" },
+      { label: "activity", slug: "/activity/" },
+      { label: "lecture", slug: "/lecture/" },
     ],
     basePath: `/`,
     social: {

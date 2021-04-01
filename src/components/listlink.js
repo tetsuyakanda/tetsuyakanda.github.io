@@ -1,22 +1,22 @@
-import React from "react"
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { Link } from "gatsby"
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import { Link } from "gatsby";
 
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage } from "react-intl";
 
 const ListLink = ({ menu, langKey }) => {
-  const links = menu.map(item => {
-    const slug = `/${langKey}${item.slug}`
-    return(
+  const links = menu.map((item) => {
+    const slug = `/${langKey}${item.slug}`;
+    return (
       <FormattedMessage key={item.label} id={item.label}>
-        {(label) =>
+        {(label) => (
           <Li key={langKey}>
             <Link to={slug}>{label}</Link>
           </Li>
-        }
+        )}
       </FormattedMessage>
-    )
+    );
   });
 
   return (
@@ -24,18 +24,18 @@ const ListLink = ({ menu, langKey }) => {
       <ul>{links}</ul>
     </nav>
   );
-}
+};
 
 const Li = styled.li`
   &:nth-child(n + 2):before {
-    content: ' / ';
+    content: " / ";
   }
   display: inline-block;
 `;
 
 ListLink.propTypes = {
   menu: PropTypes.array,
-  langKey: PropTypes.string
+  langKey: PropTypes.string,
 };
 
-export default ListLink
+export default ListLink;

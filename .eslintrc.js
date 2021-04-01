@@ -6,7 +6,8 @@ module.exports = {
     },
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:prettier/recommended",
     ],
     "globals": {
         "Atomics": "readonly",
@@ -20,10 +21,16 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "prettier"
     ],
     "rules": {
         "react/prop-types": "warn",
-        "no-unused-vars" : "warn"
+        "no-unused-vars" : "warn",
+        "prettier/prettier": ["error", {
+            "endOfLine": "crlf",
+            "arrowParens": "always",
+            "semi": true
+        }] 
     }
 };

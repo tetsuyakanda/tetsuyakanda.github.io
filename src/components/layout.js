@@ -5,17 +5,16 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import PropTypes from "prop-types";
+import { useStaticQuery, graphql } from "gatsby";
 
-import { IntlProvider } from 'react-intl'
-import { getCurrentLangKey, getLangs, getUrlForLang } from 'ptz-i18n'
+import { IntlProvider } from "react-intl";
+import { getCurrentLangKey, getLangs, getUrlForLang } from "ptz-i18n";
 
-import Header from "./header"
-import en from "../data/en"
-import ja from "../data/ja"
-// import "./layout.css"
+import Header from "./header";
+import en from "../data/en";
+import ja from "../data/ja";
 
 const messages = { en, ja };
 
@@ -28,7 +27,7 @@ const Layout = ({ children, location }) => {
           languages {
             defaultLangKey
             langs
-          } 
+          }
           menu {
             label
             slug
@@ -36,16 +35,21 @@ const Layout = ({ children, location }) => {
         }
       }
     }
-  `)
+  `);
   const url = location.pathname;
   const { title, menu } = data.site.siteMetadata;
   const { langs, defaultLangKey } = data.site.siteMetadata.languages;
   const langKey = getCurrentLangKey(langs, defaultLangKey, url);
   const homeLink = `/${langKey}/`;
-  const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url)); 
+  const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));
   return (
     <IntlProvider locale={langKey} messages={messages[langKey]}>
-      <Header siteTitle={title} menu={menu} langKey={langKey} langs={langsMenu}/>
+      <Header
+        siteTitle={title}
+        menu={menu}
+        langKey={langKey}
+        langs={langsMenu}
+      />
       <div
         style={{
           margin: `0 auto`,

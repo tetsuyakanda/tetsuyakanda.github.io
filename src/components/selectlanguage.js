@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { Link } from 'gatsby';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import { Link } from "gatsby";
 
 const SelectLanguage = ({ langs }) => {
   const links = langs.map(({ langKey, link, selected }) => (
@@ -21,7 +21,7 @@ const SelectLanguage = ({ langs }) => {
 
 const Li = styled.li`
   &:nth-child(n + 2):before {
-    content: '/';
+    content: "/";
   }
   display: inline-block;
 `;
