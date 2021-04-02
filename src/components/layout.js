@@ -65,7 +65,9 @@ const Layout = ({ children, location }) => {
           {` `}
           using
           {` `}
-          <a href="https://github.com/angeloocana/gatsby-plugin-i18n">gatsby-plugin-i18n</a>
+          <a href="https://github.com/angeloocana/gatsby-plugin-i18n">
+            gatsby-plugin-i18n
+          </a>
         </footer>
       </div>
     </IntlProvider>
