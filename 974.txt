@@ -1,7 +1,0 @@
-This paper proposes a method to estimate a product evolution
-graph based on Kolmogorov Complexity. The method applies lossless
-compression to source code of products, then, presumes derivation
-relations between two products when information increment between
-the two products is minimum. An evaluation experiment confirms that
-proposed method and existing method PRET have different tendency
-of errors in estimation results.

@@ -1,8 +1,0 @@
-Source code is often reused in software development. Such reuse activity may result in a large number
-of similar software products. To understand commonalities and variabilities among such similar products,
-comparison of their source code is important. However, each product may change its own directory struc-
-ture; it is hard to identify corresponding directories among products. In this paper, we propose a technique
-to extract and visualize a unied directory tree. The extracted directory tree includes all the directories of
-given products and merges corresponding directories into a single node. Since a node in a tree corresponds
-to multiple directories in products, developers can easily compare the contents of les. As a case study of
-our protoype, we conducted a case study with four Android products.
