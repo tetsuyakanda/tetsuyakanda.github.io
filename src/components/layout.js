@@ -62,6 +62,10 @@ const Layout = ({ children, location }) => {
           Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
+          {` `}
+          using
+          {` `}
+          <a href="https://github.com/angeloocana/gatsby-plugin-i18n">gatsby-plugin-i18n</a>
         </footer>
       </div>
     </IntlProvider>

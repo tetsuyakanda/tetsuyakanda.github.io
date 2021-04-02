@@ -17,8 +17,8 @@ const theme = {
   headerWeight: 900,
   bodyWeight: 400,
   boldWeight: "bold",
-  headerColor: "hsla(0,10%,10%,0.9)",
-  bodyColor: "hsla(150,100%,10%,0.9)",
+  headerColor: "hsla(150,100%,6%,0.9)",
+  bodyColor: "hsla(150,100%,12%,0.9)",
   blockMarginBottom: 1,
   overrideStyles: ({ scale, rhythm }, options, styles) => ({
     h1: {
