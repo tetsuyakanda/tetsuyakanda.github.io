@@ -22,12 +22,15 @@ const SelectLanguage = ({ langs }) => {
 const Li = styled.li`
   &:nth-child(n + 2):before {
     content: "/";
+    color: mintcream;
   }
   display: inline-block;
 `;
 
 const LangLink = styled(Link)`
   text-transform: uppercase;
+  padding: 10px;
+  color: mintcream;
 `;
 
 SelectLanguage.propTypes = {

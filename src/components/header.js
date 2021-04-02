@@ -1,6 +1,8 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
+import styled from "styled-components";
+import { Grid, Cell } from "styled-css-grid";
 import { FormattedMessage } from "react-intl";
 import ListLink from "./listlink";
 import SelectLanguage from "./selectLanguage";
@@ -30,7 +32,9 @@ const Header = ({ menu, langKey, langs }) => (
           <FormattedMessage id="title" />
         </Link>
         <br />
-        <span style={{ fontSize: `1.75rem` }}>KANDA, Tetsuya</span>
+        <span style={{ fontSize: `1.5rem`, color: "hsla(150,100%,50%,0.9)" }}>
+          <FormattedMessage id="title_other" />
+        </span>
       </h1>
     </div>
     <div
@@ -40,14 +44,23 @@ const Header = ({ menu, langKey, langs }) => (
         padding: `0.5rem`,
       }}
     >
-      <nav>
-        <ListLink menu={menu} langKey={langKey} />
-        <SelectLanguage langs={langs} />
-      </nav>
+      <Grid columns="1fr 200px">
+        <MenuContainer>
+          <ListLink menu={menu} langKey={langKey} />
+        </MenuContainer>
+        <LanguageContainer>
+          <SelectLanguage langs={langs} />
+        </LanguageContainer>
+      </Grid>
     </div>
   </header>
 );
 
+const MenuContainer = styled(Cell)``;
+
+const LanguageContainer = styled(Cell)`
+  text-align: right;
+`;
 Header.propTypes = {
   menu: PropTypes.array,
   langKey: PropTypes.string,

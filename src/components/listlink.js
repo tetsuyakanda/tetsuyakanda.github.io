@@ -12,7 +12,7 @@ const ListLink = ({ menu, langKey }) => {
       <FormattedMessage key={item.label} id={item.label}>
         {(label) => (
           <Li key={langKey}>
-            <Link to={slug}>{label}</Link>
+            <MenuLink to={slug}>{label}</MenuLink>
           </Li>
         )}
       </FormattedMessage>
@@ -27,10 +27,13 @@ const ListLink = ({ menu, langKey }) => {
 };
 
 const Li = styled.li`
-  &:nth-child(n + 2):before {
-    content: " / ";
-  }
   display: inline-block;
+`;
+
+const MenuLink = styled(Link)`
+  padding: 10px;
+  color: mintcream;
+  font-weight: bolder;
 `;
 
 ListLink.propTypes = {

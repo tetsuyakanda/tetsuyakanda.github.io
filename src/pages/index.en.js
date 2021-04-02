@@ -4,13 +4,15 @@ import Layout from "../components/layout";
 import MyImage from "../components/image";
 import Email from "../components/email";
 import SEO from "../components/seo";
+import Pronunciation from "../components/pronunciation";
 
 import propTypes from "../components/defaultPropTypes";
 
 const IndexPage = ({ location }) => (
   <Layout location={location}>
     <SEO title="Home" />
-    <h1>KANDA, Tetsuya</h1>
+    <h1>KANDA Tetsuya</h1>
+    <Pronunciation />
     <p>
       Assistant Professor
       <br />

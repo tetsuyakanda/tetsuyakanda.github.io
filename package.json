@@ -20,6 +20,7 @@
     "react-intl": "^5.15.5",
     "react-typography": "^0.16.19",
     "styled-components": "^5.2.2",
+    "styled-css-grid": "^1.2.1",
     "typography": "^0.16.19"
   },
   "devDependencies": {

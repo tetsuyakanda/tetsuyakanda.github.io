@@ -43,6 +43,9 @@ const theme = {
     "div#lf": {
       marginBottom: rhythm(1),
     },
+    a: {
+      color: "hsla(150,100%,25%,0.9)",
+    },
   }),
 };
 
