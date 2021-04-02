@@ -40,6 +40,9 @@ const theme = {
     li: {
       marginBottom: rhythm(0.25),
     },
+    "li ul": {
+      marginTop: rhythm(0.1),
+    },
     "div#lf": {
       marginBottom: rhythm(1),
     },

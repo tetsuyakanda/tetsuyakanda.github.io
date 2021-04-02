@@ -7,8 +7,8 @@ import propTypes from "../components/defaultPropTypes";
 
 import ServiceMDX from "../data/activity/service.ja.mdx";
 import AwardsMDX from "../data/activity/awards.ja.mdx";
+import ToolsMDX from "../data/activity/tools.ja.mdx";
 import VisitMDX from "../data/activity/visit.ja.mdx";
-import StudentMDX from "../data/activity/student.ja.mdx";
 
 const ServicePage = ({ location }) => (
   <Layout location={location}>
@@ -16,8 +16,8 @@ const ServicePage = ({ location }) => (
     <h1>かつどう：各種活動</h1>
     <ServiceMDX />
     <AwardsMDX />
+    <ToolsMDX />
     <VisitMDX />
-    <StudentMDX />
   </Layout>
 );
 

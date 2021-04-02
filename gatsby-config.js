@@ -16,6 +16,7 @@ module.exports = {
       { label: "publications", slug: "/publications/" },
       { label: "activity", slug: "/activity/" },
       { label: "lecture", slug: "/lecture/" },
+      { label: "others", slug: "/others/" },
     ],
     basePath: `/`,
     social: {

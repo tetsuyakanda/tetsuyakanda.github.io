@@ -3,6 +3,7 @@ import React from "react";
 import Layout from "../components/layout";
 import MyImage from "../components/image";
 import Email from "../components/email";
+import SNS from "../components/sns";
 import SEO from "../components/seo";
 import Pronunciation from "../components/pronunciation";
 
@@ -29,6 +30,7 @@ const IndexPage = ({ location }) => (
       <MyImage />
     </div>
     <Email />
+    <SNS />
   </Layout>
 );
 

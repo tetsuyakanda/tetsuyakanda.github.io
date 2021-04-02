@@ -32,7 +32,7 @@ const Header = ({ menu, langKey, langs }) => (
           <FormattedMessage id="title" />
         </Link>
         <br />
-        <span style={{ fontSize: `1.5rem`, color: "hsla(150,100%,50%,0.9)" }}>
+        <span style={{ fontSize: `1.5rem`, color: "hsla(150,100%,65%)" }}>
           <FormattedMessage id="title_other" />
         </span>
       </h1>
