@@ -10,7 +10,7 @@ import propTypes from "../components/defaultPropTypes";
 
 const IndexPage = ({ location }) => (
   <Layout location={location}>
-    <SEO title="ホーム" />
+    <SEO title="ホーム" lang="ja" />
     <h1>神田 哲也</h1>
     <p>
       助教

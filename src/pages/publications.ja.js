@@ -9,7 +9,7 @@ import propTypes from "../components/defaultPropTypes";
 
 const IndexPage = ({ location }) => (
   <Layout location={location}>
-    <SEO title="業績一覧" />
+    <SEO title="業績一覧" lang="ja" />
     <h1>ろんぶん：業績一覧</h1>
     <Citation lang="ja" />
   </Layout>

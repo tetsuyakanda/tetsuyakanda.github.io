@@ -3,8 +3,8 @@ module.exports = {
     DEV_SSR: false,
   },
   siteMetadata: {
-    title: `KANDA, Tetsuya`,
-    description: `Assistant Professor, Osaka University`,
+    title: `KANDA Tetsuya`,
+    description: `Webpage of KANDA Tetsuya, Assistant Professor at Osaka University`,
     author: `@tetsuyakanda`,
     languages: {
       langs: [`en`, `ja`],

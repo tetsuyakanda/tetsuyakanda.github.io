@@ -10,7 +10,7 @@ import HobbyMDX from "../data/others/hobby.ja.mdx";
 
 const ServicePage = ({ location }) => (
   <Layout location={location}>
-    <SEO title="その他" />
+    <SEO title="その他" lang="ja" />
     <h1>そのほか</h1>
     <StudentMDX />
     <HobbyMDX />

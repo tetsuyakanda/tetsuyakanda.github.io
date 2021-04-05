@@ -12,7 +12,7 @@ import VisitMDX from "../data/activity/visit.ja.mdx";
 
 const ServicePage = ({ location }) => (
   <Layout location={location}>
-    <SEO title="各種活動" />
+    <SEO title="各種活動" lang="ja" />
     <h1>かつどう：各種活動</h1>
     <ServiceMDX />
     <AwardsMDX />

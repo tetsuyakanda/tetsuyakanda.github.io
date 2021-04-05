@@ -9,7 +9,7 @@ import AboutMDX from "../data/about.ja.mdx";
 
 const AboutPage = ({ location }) => (
   <Layout location={location}>
-    <SEO title="About" />
+    <SEO title="About" lang="ja" />
     <AboutMDX />
   </Layout>
 );
