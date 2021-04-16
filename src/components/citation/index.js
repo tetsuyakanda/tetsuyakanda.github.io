@@ -40,6 +40,7 @@ const Citation = ({ lang }) => {
               family
             }
             URL
+            DOI
             citation_label
             collection_title
             container_title

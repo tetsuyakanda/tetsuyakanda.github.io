@@ -5,6 +5,7 @@ import { rhythm } from "../../styles/typography";
 import Author from "./author";
 import Ym from "./ym";
 import Contents from "./contents";
+import Badge from "../badge";
 
 const CiteItem = ({ lang, papers }) => {
   const items = papers.map((c) => (
@@ -21,10 +22,20 @@ const CiteItem = ({ lang, papers }) => {
         label={c.citation_label}
         date_parts={c.issued.date_parts}
       />
+      {c.URL && <URL url={c.URL} />}
+      {c.DOI && <DOI doi={c.DOI} />}
     </Li>
   ));
 
   return <ul>{items}</ul>;
+};
+
+const URL = ({ url }) => {
+  return <Badge title="detail" link={url} />;
+};
+
+const DOI = ({ doi }) => {
+  return <Badge title="DOI" content={doi} link={"https://​doi.org/" + doi} />;
 };
 
 const Li = styled.li`
