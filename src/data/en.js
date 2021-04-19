@@ -20,4 +20,5 @@ module.exports = {
   lEnglish: "English",
   lJapanese: "Japanese",
   detail: "detail",
+  DOI: "DOI",
 };
