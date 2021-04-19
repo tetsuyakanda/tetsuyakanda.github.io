@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+
 import { rhythm } from "../../styles/typography";
 
 import Author from "./author";

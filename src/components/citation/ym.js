@@ -22,7 +22,7 @@ function langStyle(lang, label) {
 const JStyle = ({ date_parts }) => {
   return (
     <span>
-      {date_parts[0]}年{date_parts[1]}月
+      {date_parts[0]}年{date_parts[1] && date_parts[1] + "月"}
     </span>
   );
 };
@@ -30,7 +30,7 @@ const JStyle = ({ date_parts }) => {
 const EStyle = ({ date_parts }) => {
   return (
     <span>
-      {en[date_parts[1] - 1]} {date_parts[0]}
+      {date_parts[1] && en[date_parts[1] - 1]} {date_parts[0]}
     </span>
   );
 };
