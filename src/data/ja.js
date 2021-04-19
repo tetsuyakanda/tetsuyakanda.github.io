@@ -19,4 +19,5 @@ module.exports = {
   lAll: "全て",
   lEnglish: "英語",
   lJapanese: "日本語",
+  detail: "くわしく",
 };

@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { IntlProvider } from "react-intl";
 import { getCurrentLangKey, getLangs, getUrlForLang } from "ptz-i18n";
 
+import A from "../components/A";
 import Header from "./header";
 import en from "../data/en";
 import ja from "../data/ja";
@@ -61,13 +62,13 @@ const Layout = ({ children, location }) => {
         <footer>
           Built with
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <A href="https://www.gatsbyjs.org">Gatsby</A>
           {` `}
           using
           {` `}
-          <a href="https://github.com/angeloocana/gatsby-plugin-i18n">
+          <A href="https://github.com/angeloocana/gatsby-plugin-i18n">
             gatsby-plugin-i18n
-          </a>
+          </A>
         </footer>
       </div>
     </IntlProvider>

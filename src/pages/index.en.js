@@ -6,6 +6,7 @@ import Email from "../components/email";
 import SNS from "../components/sns";
 import SEO from "../components/seo";
 import Pronunciation from "../components/pronunciation";
+import A from "../components/A";
 
 import propTypes from "../components/defaultPropTypes";
 
@@ -17,9 +18,9 @@ const IndexPage = ({ location }) => (
     <p>
       Assistant Professor
       <br />
-      <a href="http://sel.ist.osaka-u.ac.jp/">
+      <A href="http://sel.ist.osaka-u.ac.jp/">
         Software Engineering Laboratory
-      </a>
+      </A>
       ,<br />
       Department of Computer Science, Graduate School of Information Science and
       Technology,

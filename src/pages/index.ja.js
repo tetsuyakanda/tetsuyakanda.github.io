@@ -5,6 +5,7 @@ import MyImage from "../components/image";
 import Email from "../components/email";
 import SNS from "../components/sns";
 import SEO from "../components/seo";
+import A from "../components/A";
 
 import propTypes from "../components/defaultPropTypes";
 
@@ -16,7 +17,7 @@ const IndexPage = ({ location }) => (
       助教
       <br />
       大阪大学 大学院情報科学研究科 コンピュータサイエンス専攻{" "}
-      <a href="http://sel.ist.osaka-u.ac.jp/">ソフトウェア工学講座</a>
+      <A href="http://sel.ist.osaka-u.ac.jp/">ソフトウェア工学講座</A>
     </p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <MyImage />
