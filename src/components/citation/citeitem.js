@@ -11,24 +11,33 @@ import Badge from "../badge";
 const CiteItem = ({ lang, papers }) => {
   const items = papers.map((c) => (
     <Li key={c.id}>
-      <Author lang={lang} language={c.language} author={c.author} />:{" "}
-      <span>
-        &ldquo;
-        <span className="paperTitle">{c.title}</span>
-        &rdquo;
-      </span>
-      , <Contents cite={c} lang={lang} />,{" "}
+      <Author lang={lang} language={c.language} author={c.author} />:
+      <br />
+      <PaperTitle title={c.title} />,
+      <br />
+      <Contents cite={c} lang={lang} />,{" "}
       <Ym
         lang={lang}
         label={c.citation_label}
         date_parts={c.issued.date_parts}
       />
+      {(c.URL || c.DOI) && <br />}
       {c.URL && <URL url={c.URL} />}
       {c.DOI && <DOI doi={c.DOI} />}
     </Li>
   ));
 
   return <ul>{items}</ul>;
+};
+
+const PaperTitle = ({ title }) => {
+  return (
+    <span>
+      &ldquo;
+      <span className="paperTitle">{title}</span>
+      &rdquo;
+    </span>
+  );
 };
 
 const URL = ({ url }) => {
