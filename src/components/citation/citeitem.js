@@ -21,7 +21,7 @@ const CiteItem = ({ lang, papers }) => {
         label={c.citation_label}
         date_parts={c.issued.date_parts}
       />
-      {(c.URL || c.DOI) && <br />}
+      {(c.URL || c.DOI) && " "}
       {c.URL && <URL url={c.URL} />}
       {c.DOI && <DOI doi={c.DOI} />}
     </Li>
