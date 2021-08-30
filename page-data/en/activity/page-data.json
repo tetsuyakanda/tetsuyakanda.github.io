@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-pages-activity-en-js","path":"/en/activity/","result":{"pageContext":{"slug":"/en/activity/","langKey":"en"}},"staticQueryHashes":["1677717303","63159454"]}
+{
+    "componentChunkName": "component---src-pages-activity-en-js",
+    "path": "/en/activity/",
+    "result": {"pageContext":{"slug":"/en/activity/","langKey":"en"}},
+    "staticQueryHashes": ["1677717303","63159454"]}
