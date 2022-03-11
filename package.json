@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "author": "Kanda, Tetsuya <t-kanda@ist.osaka-u.ac.jp>",
   "dependencies": {
-    "@tetsuyakanda/gatsby-transformer-citationjs": "^0.1.0",
+    "@tetsuyakanda/gatsby-transformer-citationjs": "^0.1.1",
     "babel-plugin-styled-components": "^1.13.2",
     "gatsby": "^3.12.1",
     "gatsby-image": "^3.11.0",
