@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-pages-index-js",
-    "path": "/",
-    "result": {"data":{"site":{"siteMetadata":{"languages":{"defaultLangKey":"en","langs":["en","ja"]}}}},"pageContext":{"slug":"/","langKey":"en"}},
-    "staticQueryHashes": []}
+{"componentChunkName":"component---src-pages-index-js","path":"/","result":{"data":{"site":{"siteMetadata":{"languages":{"defaultLangKey":"en","langs":["en","ja"]}}}},"pageContext":{"slug":"/","langKey":"en"}},"staticQueryHashes":[]}

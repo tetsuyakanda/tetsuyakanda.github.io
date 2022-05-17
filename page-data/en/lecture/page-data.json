@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-pages-lecture-en-js",
-    "path": "/en/lecture/",
-    "result": {"pageContext":{"slug":"/en/lecture/","langKey":"en"}},
-    "staticQueryHashes": ["1677717303","63159454"]}
+{"componentChunkName":"component---src-pages-lecture-en-js","path":"/en/lecture/","result":{"pageContext":{"slug":"/en/lecture/","langKey":"en"}},"staticQueryHashes":["1677717303","63159454"]}
