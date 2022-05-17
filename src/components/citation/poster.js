@@ -9,21 +9,20 @@ const Ctitle = ({ collection_title }) => {
   return collection_title ? <span>({collection_title})</span> : null;
 };
 
-const PosterSession = ({ lang, language }) => {
-  return (
-    <span>
-      {lang === `ja` && language === `Japanese`
-        ? "ポスター発表, "
-        : "poster session, "}
-    </span>
-  );
-};
+// const PosterSession = ({ lang, language }) => {
+//   return (
+//     <span>
+//       {lang === `ja` && language === `Japanese`
+//         ? "ポスター発表, "
+//         : "poster session, "}
+//     </span>
+//   );
+// };
 
 const Poster = ({ cite, lang }) => {
   return (
     <span>
       {cite.container_title} <Ctitle collection_title={cite.collection_title} />{" "}
-      <PosterSession lang={lang} language={cite.language} />
       <PP page={cite.page} /> {cite.publisher_place}
     </span>
   );
