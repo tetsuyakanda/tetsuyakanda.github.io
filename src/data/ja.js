@@ -21,4 +21,5 @@ module.exports = {
   lJapanese: "日本語",
   detail: "くわしく",
   DOI: "DOI",
+  toAppear: "採録決定",
 };
