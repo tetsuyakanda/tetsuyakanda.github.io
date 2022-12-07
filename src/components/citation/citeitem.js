@@ -18,7 +18,7 @@ const CiteItem = ({ lang, papers }) => {
       <Contents cite={c} lang={lang} />,{" "}
       <Ym
         lang={lang}
-        label={c.citation_label}
+        label={c.citation_key}
         date_parts={c.issued.date_parts}
       />
       {(c.URL || c.DOI) && " "}

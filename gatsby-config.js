@@ -57,16 +57,18 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
-        gatsbyRemarkPlugins: [
-          {
-            resolve: "gatsby-remark-external-links",
-            options: {
-              target: "_blank",
-              rel: "nofollow noopener noreferrer"
+        mdxOptions: {
+          remarkPlugins: [
+            {
+              resolve: "gatsby-remark-external-links",
+              options: {
+                target: "_blank",
+                rel: "nofollow noopener noreferrer"
+              }
             }
-        }
-        ]
-       },
+          ],
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-typography`,
@@ -79,6 +81,13 @@ module.exports = {
       options: {
         name: `bib`,
         path: `${__dirname}/src/bib`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data`,
       },
     },
     `@tetsuyakanda/gatsby-transformer-citationjs`,

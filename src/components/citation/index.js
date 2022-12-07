@@ -44,7 +44,7 @@ const Citation = ({ lang }) => {
             }
             URL
             DOI
-            citation_label
+            citation_key
             collection_title
             container_title
             genre
@@ -72,7 +72,7 @@ const Citation = ({ lang }) => {
 
   const switchEntryWithLang = (cite, lang) => {
     const ignoreSuffix = lang === `ja` ? `_E` : `_J`;
-    return !cite.citation_label.endsWith(ignoreSuffix);
+    return !cite.citation_key.endsWith(ignoreSuffix);
   };
 
   const langs = [`All`, `English`, `Japanese`];
