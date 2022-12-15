@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_tkweb=self.webpackChunkgatsby_tkweb||[]).push([[641],{4459:function(e,t,a){a.r(t);var l=a(7294),n=a(8260),c=a(8183),r=a(4096);a(3470);t.default=e=>{let{location:t}=e;return l.createElement(n.Z,{location:t},l.createElement(c.Z,{title:"業績一覧",lang:"ja"}),l.createElement("h1",null,"ろんぶん：業績一覧"),l.createElement(r.Z,{lang:"ja"}))}}}]);
+//# sourceMappingURL=component---src-pages-publications-ja-js-409057b75291411445b0.js.map
