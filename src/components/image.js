@@ -4,11 +4,11 @@ import { StaticImage } from "gatsby-plugin-image";
 export const MyImage = () => {
   return (
     <StaticImage
-      src="../images/abc.jpg"
+      src="../images/ist.jpg"
       alt="KANDA Tetsuya photo"
       placeholder="blurred"
       layout="fixed"
-      width={275}
+      width={300}
     />
   );
 };
