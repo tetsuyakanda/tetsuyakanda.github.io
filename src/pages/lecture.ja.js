@@ -9,11 +9,14 @@ import LectureMDX from "../data/lecture.ja.mdx";
 
 const LecturePage = ({ location }) => (
   <Layout location={location}>
-    <SEO title="担当講義" lang="ja" />
     <LectureMDX />
   </Layout>
 );
 
 LecturePage.propTypes = propTypes;
+
+export function Head() {
+  return <SEO title="担当講義" lang="ja" />;
+}
 
 export default LecturePage;

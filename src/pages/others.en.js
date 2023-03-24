@@ -10,12 +10,15 @@ import StudentMDX from "../data/others/student.en.mdx";
 
 const ServicePage = ({ location }) => (
   <Layout location={location}>
-    <SEO title="MISC" />
     <h1>MISC</h1>
     <StudentMDX />
   </Layout>
 );
 
 ServicePage.propTypes = propTypes;
+
+export function Head() {
+  return <SEO title="MISC" />;
+}
 
 export default ServicePage;

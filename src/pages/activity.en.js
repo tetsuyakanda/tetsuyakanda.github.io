@@ -12,7 +12,6 @@ import VisitMDX from "../data/activity/visit.en.mdx";
 
 const ServicePage = ({ location }) => (
   <Layout location={location}>
-    <SEO title="Activity" />
     <h1>Activity</h1>
     <ServiceMDX />
     <AwardsMDX />
@@ -22,5 +21,9 @@ const ServicePage = ({ location }) => (
 );
 
 ServicePage.propTypes = propTypes;
+
+export function Head() {
+  return <SEO title="Activity" />;
+}
 
 export default ServicePage;

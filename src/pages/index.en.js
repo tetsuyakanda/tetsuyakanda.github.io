@@ -12,7 +12,6 @@ import propTypes from "../components/defaultPropTypes";
 
 const IndexPage = ({ location }) => (
   <Layout location={location}>
-    <SEO title="Home" />
     <h1>KANDA Tetsuya</h1>
     <Pronunciation />
     <p>
@@ -36,5 +35,9 @@ const IndexPage = ({ location }) => (
 );
 
 IndexPage.propTypes = propTypes;
+
+export function Head() {
+  return <SEO title="Home" />;
+}
 
 export default IndexPage;

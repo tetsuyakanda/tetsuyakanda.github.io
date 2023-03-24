@@ -9,12 +9,15 @@ import propTypes from "../components/defaultPropTypes";
 
 const IndexPage = ({ location }) => (
   <Layout location={location}>
-    <SEO title="Publications" />
     <h1>Publications</h1>
     <Citation lang="en" />
   </Layout>
 );
 
 IndexPage.propTypes = propTypes;
+
+export function Head() {
+  return <SEO title="Publications" />;
+}
 
 export default IndexPage;

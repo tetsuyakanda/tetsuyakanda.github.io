@@ -12,7 +12,6 @@ import VisitMDX from "../data/activity/visit.ja.mdx";
 
 const ServicePage = ({ location }) => (
   <Layout location={location}>
-    <SEO title="各種活動" lang="ja" />
     <h1>かつどう：各種活動</h1>
     <ServiceMDX />
     <AwardsMDX />
@@ -22,5 +21,9 @@ const ServicePage = ({ location }) => (
 );
 
 ServicePage.propTypes = propTypes;
+
+export function Head() {
+  return <SEO title="各種活動" lang="ja" />;
+}
 
 export default ServicePage;

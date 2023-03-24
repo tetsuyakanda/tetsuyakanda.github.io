@@ -9,11 +9,14 @@ import AboutMDX from "../data/about.mdx";
 
 const AboutPage = ({ location }) => (
   <Layout location={location}>
-    <SEO title="About" />
     <AboutMDX />
   </Layout>
 );
 
 AboutPage.propTypes = propTypes;
+
+export function Head() {
+  return <SEO title="About" />;
+}
 
 export default AboutPage;
