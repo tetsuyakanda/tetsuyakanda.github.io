@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkgatsby_tkweb=self.webpackChunkgatsby_tkweb||[]).push([[983],{8930:function(e,t,l){l.r(t);var n=l(7294),a=l(8260),c=l(8183),u=l(4096);l(3470);t.default=e=>{let{location:t}=e;return n.createElement(a.Z,{location:t},n.createElement(c.Z,{title:"Publications"}),n.createElement("h1",null,"Publications"),n.createElement(u.Z,{lang:"en"}))}}}]);
-//# sourceMappingURL=component---src-pages-publications-en-js-6a7d00ece58e759ce1e2.js.map
