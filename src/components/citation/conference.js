@@ -15,15 +15,17 @@ const No = ({ number }) => {
   return number ? <span>no.{number}, </span> : null;
 };
 
-const Ctitle = ({ collection_title }) => {
+const Ctitle = ({ container_title, collection_title }) => {
   // some conferences has no abbreviations.
-  return collection_title ? <span>({collection_title})</span> : null;
+  return collection_title
+    ? <>{container_title} ({collection_title})</>
+    : <>{container_title}</>;
 };
 
 const Conference = ({ cite }) => {
   return (
     <span>
-      {cite.container_title} <Ctitle collection_title={cite.collection_title} />
+      <Ctitle container_title={cite.container_title} collection_title={cite.collection_title} />
       , <Vol volume={cite.volume} />
       <No number={cite.number} />
       <PP page={cite.page} /> {cite.publisher_place}
