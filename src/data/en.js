@@ -6,7 +6,7 @@ module.exports = {
   about: "About",
   activity: "Activity",
   publications: "Publications",
-  lecture: "Lecture",
+  lecture: "Teaching",
   others: "others",
   contact: "contact",
   sns: "Link",

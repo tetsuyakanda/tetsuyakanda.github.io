@@ -4,7 +4,7 @@ import { FormattedMessage } from "react-intl";
 
 const Radio = ({ name, onChange, lfState }) => {
   return (
-    <Label isSelected={lfState === name} id={name}>
+    <Label isselected={(lfState === name).toString()} id={name}>
       <RadioAccess id={name} onChange={onChange} />
       <FormattedMessage id={`l${name}`} />
     </Label>
@@ -13,10 +13,10 @@ const Radio = ({ name, onChange, lfState }) => {
 
 const Label = styled.label`
   color: ${(props) =>
-    props.isSelected ? "hsla(150,100%,10%,0.9)" : "hsla(150,100%,30%,0.9)"};
-  background-color: ${(props) => (props.isSelected ? "white" : "mintcream")};
+    props.isselected === "true" ? "hsla(150,100%,10%,0.9)" : "hsla(150,100%,30%,0.9)"};
+  background-color: ${(props) => (props.isselected === "true" ? "white" : "mintcream")};
   border: 1px solid
-    ${(props) => (props.isSelected ? "hsla(150,100%,40%,0.9)" : "white")};
+    ${(props) => (props.isselected === "true" ? "hsla(150,100%,40%,0.9)" : "white")};
   border-radius: 4px;
   padding: 2px 4px;
   margin: 0px 2px;
