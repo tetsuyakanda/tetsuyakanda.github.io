@@ -13,10 +13,9 @@ const IndexPage = ({ location }) => (
   <Layout location={location}>
     <h1>神田 哲也</h1>
     <p>
-      助教
+      准教授
       <br />
-      大阪大学 大学院情報科学研究科 コンピュータサイエンス専攻{" "}
-      <A href="http://sel.ist.osaka-u.ac.jp/">ソフトウェア工学講座</A>
+      ノートルダム清心女子大学 情報デザイン学部 情報デザイン学科
     </p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <MyImage />

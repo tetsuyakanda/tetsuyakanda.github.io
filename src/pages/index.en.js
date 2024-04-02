@@ -15,16 +15,11 @@ const IndexPage = ({ location }) => (
     <h1>KANDA Tetsuya</h1>
     <Pronunciation />
     <p>
-      Assistant Professor
+      Associate Professor
       <br />
-      <A href="http://sel.ist.osaka-u.ac.jp/">
-        Software Engineering Laboratory
-      </A>
-      ,<br />
-      Department of Computer Science, Graduate School of Information Science and
-      Technology,
+      Department of Information and Data Science, Faculty of Information and Data Science,
       <br />
-      Osaka University, Japan
+      Notre Dame Seishin University, Japan
     </p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <MyImage />
