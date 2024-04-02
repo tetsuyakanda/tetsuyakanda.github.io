@@ -11,8 +11,8 @@ const Pronunciation = () => {
           given name.
         </div>
         <div>
-          &ldquo;Tetsuya&rdquo; may be difficult for some people to pronounce,
-          so please call me &ldquo;Kanda&rdquo; or &ldquo;Kanda-san&rdquo;.
+          &ldquo;Tetsuya&rdquo; may be difficult for some people to pronounce.
+          If so, feel free to call me &ldquo;Kanda&rdquo; or &ldquo;Kanda-san&rdquo;.
         </div>
         <Div2>
           It is very common in Japan to call someone by their family name, so
