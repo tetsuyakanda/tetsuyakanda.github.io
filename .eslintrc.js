@@ -22,15 +22,9 @@ module.exports = {
     },
     "plugins": [
         "react",
-        "prettier"
     ],
     "rules": {
         "react/prop-types": "warn",
-        "no-unused-vars" : "warn",
-        "prettier/prettier": ["error", {
-            "endOfLine": "crlf",
-            "arrowParens": "always",
-            "semi": true
-        }] 
+        "no-unused-vars" : "warn"
     }
 };
