@@ -12,7 +12,7 @@ class RedirectIndex extends React.PureComponent {
       const langKey = getUserLangKey(langs, defaultLangKey);
       const homeUrl = withPrefix(`/${langKey}/`);
 
-      navigate(homeUrl);
+      navigate(homeUrl, { replace: true });
     }
   }
 
