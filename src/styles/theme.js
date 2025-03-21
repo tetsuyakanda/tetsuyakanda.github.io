@@ -28,6 +28,9 @@ const theme = {
       lineHeight: rhythm(1.5),
       marginBottom: rhythm(0.5),
     },
+    h3: {
+      textDecoration: "underline",
+    },
     ".was": {
       color: "#999999",
     },
