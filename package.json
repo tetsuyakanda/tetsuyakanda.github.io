@@ -2,7 +2,7 @@
   "name": "gatsby-tkweb",
   "private": true,
   "version": "0.0.3",
-  "author": "Kanda, Tetsuya <t-kanda@ist.osaka-u.ac.jp>",
+  "author": "Kanda, Tetsuya <kanda@m.ndsu.ac.jp>",
   "dependencies": {
     "@tetsuyakanda/gatsby-transformer-citationjs": "^0.2.0",
     "gatsby": "^5.14.6",

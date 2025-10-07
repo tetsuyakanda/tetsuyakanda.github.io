@@ -4,7 +4,7 @@ module.exports = {
   },
   siteMetadata: {
     title: `KANDA Tetsuya`,
-    description: `Webpage of KANDA Tetsuya, Assistant Professor at Osaka University`,
+    description: `Webpage of KANDA Tetsuya, Associate Professor at Notre Dame Seishin University`,
     author: `@tetsuyakanda`,
     languages: {
       langs: [`en`, `ja`],
