@@ -19,7 +19,7 @@ const IndexPage = ({ location }) => (
       <br />
       Department of Information and Data Science, Faculty of Information and Data Science,
       <br />
-      Notre Dame Seishin University, Japan
+      <A href="https://www.ndsu.ac.jp/english/index.html">Notre Dame Seishin University, Japan</A>
     </p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <MyImage />

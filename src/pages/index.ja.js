@@ -15,7 +15,7 @@ const IndexPage = ({ location }) => (
     <p>
       准教授
       <br />
-      ノートルダム清心女子大学 情報デザイン学部 情報デザイン学科
+      <A href="https://www.ndsu.ac.jp/department/information-design/">ノートルダム清心女子大学 情報デザイン学部 情報デザイン学科</A>
     </p>
     <p>（大阪大学 大学院情報科学研究科 招へい教員）</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
