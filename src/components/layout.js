@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import { IntlProvider } from "react-intl";
 import { getCurrentLangKey, getLangs, getUrlForLang } from "ptz-i18n";
+import { MDXProvider } from "@mdx-js/react"
 
 import A from "../components/A";
 import Header from "./header";
@@ -43,6 +44,9 @@ const Layout = ({ children, location }) => {
   const langKey = getCurrentLangKey(langs, defaultLangKey, url);
   const homeLink = `/${langKey}/`;
   const langsMenu = getLangs(langs, langKey, getUrlForLang(homeLink, url));
+  const components = {
+    a: A,
+  }
   return (
     <IntlProvider locale={langKey} messages={messages[langKey]}>
       <Header
@@ -58,7 +62,9 @@ const Layout = ({ children, location }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <main>{children}</main>
+        <MDXProvider components={components}>
+          <main>{children}</main>
+        </MDXProvider>
         <footer>
           Built with
           {` `}
