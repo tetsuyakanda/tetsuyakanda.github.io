@@ -1,0 +1,59 @@
+html {
+  font: 100%/1.4 'Sawarabi Mincho',serif;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+* {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  color: hsla(150,100%,12%,0.9);
+  font-family: 'Sawarabi Mincho',serif;
+  font-weight: 400;
+  word-wrap: break-word;
+  font-kerning: normal;
+}
+h1 {
+  letter-spacing: 0.04em
+}
+h1, h2, h3, h4, h5, h6 {
+  color: hsla(150,100%,6%,0.9);
+  font-family: 'Noto Serif JP',serif;
+  font-weight: 900;
+  line-height: 2.1rem;
+  margin-bottom: 0.7rem;
+}
+h3 {
+  text-decoration: underline;
+}
+.was {
+  color: #999999;
+}
+.itsme {
+  text-decoration: underline;
+}
+.paperTitle {
+  font-weight: bolder;
+}
+li {
+  margin-bottom: 0.35rem;
+}
+ul {
+  margin: 0 0 1.4rem 1.4rem;
+  padding: 0;
+  list-style-position: outside;
+}
+li > p {
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+}
+li :last-child {
+  margin-bottom: 0.2rem;
+}
+div#lf {
+  margin-bottom: 1.4rem;
+}
+a {
+  color: hsla(150,100%,25%,0.9);
+}

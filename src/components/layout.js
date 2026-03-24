@@ -13,6 +13,8 @@ import { IntlProvider } from "react-intl";
 import { getCurrentLangKey, getLangs, getUrlForLang } from "ptz-i18n";
 import { MDXProvider } from "@mdx-js/react"
 
+import "../styles/theme.css"
+
 import A from "../components/A";
 import Header from "./header";
 import en from "../data/en";

@@ -1,7 +1,4 @@
 import React from "react";
-import styled from "styled-components";
-
-import { rhythm } from "../../styles/typography";
 
 import Author from "./author";
 import Ym from "./ym";
@@ -10,7 +7,7 @@ import Badge from "../badge";
 
 const CiteItem = ({ lang, papers }) => {
   const items = papers.map((c) => (
-    <Li key={c.id}>
+    <li key={c.id}>
       <Author lang={lang} language={c.language} author={c.author} />:
       <br />
       <PaperTitle title={c.title} />,
@@ -24,7 +21,7 @@ const CiteItem = ({ lang, papers }) => {
       {(c.URL || c.DOI) && " "}
       {c.URL && <URL url={c.URL} />}
       {c.DOI && <DOI doi={c.DOI} />}
-    </Li>
+    </li>
   ));
 
   return <ul>{items}</ul>;
@@ -47,9 +44,5 @@ const URL = ({ url }) => {
 const DOI = ({ doi }) => {
   return <Badge title="DOI" content={doi} link={"https://​doi.org/" + doi} />;
 };
-
-const Li = styled.li`
-  margin-bottom: ${rhythm(0.3)};
-`;
 
 export default CiteItem;
