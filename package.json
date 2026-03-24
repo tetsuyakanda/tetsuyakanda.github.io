@@ -5,31 +5,31 @@
   "author": "Kanda, Tetsuya <kanda@m.ndsu.ac.jp>",
   "dependencies": {
     "@tetsuyakanda/gatsby-transformer-citationjs": "^0.2.0",
-    "gatsby": "^5.15.0",
+    "gatsby": "^5.16.1",
     "gatsby-plugin-i18n": "^1.0.1",
-    "gatsby-plugin-image": "^3.15.0",
-    "gatsby-plugin-styled-components": "^6.15.0",
-    "gatsby-plugin-typography": "^5.15.0",
+    "gatsby-plugin-image": "^3.16.0",
+    "gatsby-plugin-styled-components": "^6.16.0",
+    "gatsby-plugin-typography": "^5.16.0",
     "prop-types": "^15.8.1",
     "ptz-i18n": "^1.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-intl": "^7.1.14",
     "react-typography": "^0.16.23",
-    "styled-components": "^6.1.19",
+    "styled-components": "^6.3.11",
     "typography": "^0.16.24"
   },
   "devDependencies": {
     "@mdx-js/react": "^2.3.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react": "^7.37.5",
-    "gatsby-plugin-manifest": "^5.15.0",
-    "gatsby-plugin-mdx": "^5.15.0",
-    "gatsby-plugin-sharp": "^5.15.0",
-    "gatsby-source-filesystem": "^5.15.0",
-    "gatsby-transformer-sharp": "^5.15.0",
+    "gatsby-plugin-manifest": "^5.16.0",
+    "gatsby-plugin-mdx": "^5.16.0",
+    "gatsby-plugin-sharp": "^5.16.0",
+    "gatsby-source-filesystem": "^5.16.0",
+    "gatsby-transformer-sharp": "^5.16.0",
     "gh-pages": "^6.3.0",
-    "prettier": "^3.6.2"
+    "prettier": "^3.8.1"
   },
   "keywords": [
     "gatsby"
