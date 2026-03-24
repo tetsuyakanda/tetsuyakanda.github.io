@@ -25,7 +25,7 @@ const Poster = ({ cite, lang }) => {
   return (
     <span>
       <Ctitle container_title={cite.container_title} collection_title={cite.collection_title} />
-      {" "}
+      ,
       <PP page={cite.page} /> {cite.publisher_place}
     </span>
   );

@@ -9,7 +9,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 
-function SEO({ description, lang, title }) {
+function SEO({ description=``, lang=`en`, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -41,11 +41,6 @@ function SEO({ description, lang, title }) {
     </>
   );
 }
-
-SEO.defaultProps = {
-  lang: `en`,
-  description: ``,
-};
 
 SEO.propTypes = {
   description: PropTypes.string,
